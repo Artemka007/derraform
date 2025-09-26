@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  myterraform:
+    build: .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./examples:/app/examples
+      - ./state:/app/state
+    working_dir: /app
+    command: ["apply", "examples/web-app.tf"]
+    
+  # Тестовые сервисы для демонстрации
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+
+  redis:
+    image: redis:alpine
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
