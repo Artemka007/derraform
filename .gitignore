@@ -1,0 +1,124 @@
+# Binaries for programs and plugins
+myterraform
+myterraform.exe
+myterraform-*
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+
+# IDE and editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Terraform specific files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+*.terraform.lock.hcl
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
+
+# MyTerraform state files
+*.tfstate
+*.tfstate.backup
+state/
+*.state
+*.state.backup
+
+# Log files
+*.log
+logs/
+*.log.*
+
+# Build artifacts
+dist/
+build/
+bin/
+pkg/
+
+# Coverage reports
+coverage.txt
+coverage.html
+coverage.out
+*.coverprofile
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Documentation
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Backup files
+*.bak
+*.backup
+
+# Docker related
+.docker/
+docker-compose.override.yml
+
+# Binary releases
+releases/
+*.tar.gz
+*.zip
+
+# Local configuration
+local.config.yaml
+local.config.yml
+
+# Profiling output
+*.prof
+*.memprof
+*.cpuprof
+
+# Go module packages
+/.gomod/
+
+# gopls history
+.gopls/
+
+# Delve debugger
+.debug/
+
+# Local development files
+.devcontainer/
+go.sum

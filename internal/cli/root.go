@@ -1,21 +1,21 @@
 package cli
 
 import (
-    "github.com/spf13/cobra"
+	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-    Use:   "myterraform",
-    Short: "Terraform clone for Docker",
+	Use:   "myterraform",
+	Short: "Terraform clone for Docker",
 }
 
 func Execute() error {
-    return rootCmd.Execute()
+	return rootCmd.Execute()
 }
 
 func init() {
-    rootCmd.AddCommand(initCmd)
-    rootCmd.AddCommand(planCmd)
-    rootCmd.AddCommand(applyCmd)
-    rootCmd.AddCommand(destroyCmd)
+	rootCmd.AddCommand(initCmd)
+	rootCmd.AddCommand(planCmd)
+	rootCmd.AddCommand(applyCmd)
+	rootCmd.AddCommand(destroyCmd)
 }
